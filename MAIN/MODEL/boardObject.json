@@ -1,0 +1,81 @@
+{
+    "COIN": {
+      "value": [
+        "heads",
+        "tails"
+      ]
+    },
+    
+    "PLAYER": {
+      "stoneNumber": 15,
+      
+      "diceObject": {
+        "diceNumber": 6,
+        "diceFaces": {
+          "shield": {
+            "pic": "shield_pic",
+            "effect_on_stone": 0,
+            "effect_on_other_element": "arrow to zero"
+          },
+          "helmet": {
+            "pic": "helmet_pic",
+            "effect_on_stone": 0,
+            "effect_on_other_element": "axe to zero"
+          },
+          "axe": {
+            "pic": "axe_pic",
+            "effect_on_stone": -1,
+            "effect_on_other_element": 0
+          },
+          "arrow": {
+            "pic": "arrow_pic",
+            "effect_on_stone": -1,
+            "effect_on_other_element": 0
+          },
+          "hand": {
+            "pic": "hand_pic",
+            "effect_on_stone": 0,
+            "effect_on_other_element": 0,
+            "effect_on_opponent_god_token": -1
+          }
+        }
+      },
+      
+      "tokenObject": {
+        "health_token": {
+          "pic": "health token pic",
+          "low_level_effect": {
+            "token_cost": 2,
+            "effect_on_stone": -2
+          },
+          "mid_level_effect": {
+            "token_cost": 4,
+            "effect_on_stone": -4
+          },
+          "high_level_effect": {
+            "token_cost": 8,
+            "effect_on_stone": -8
+          }
+        },
+        
+        "defence_token": {
+          "pic" : "defence token pic",
+          "low_level_effect": {
+            "token_cost": 2,
+            "effect_on_stone": 2
+          },
+          "mid_level_effect": {
+            "token_cost": 4,
+            "effect_on_stone": 4
+          },
+          "high_level_effect": {
+            "token_cost": 8,
+            "effect_on_stone": 8
+          }
+        },
+        "hand_multiplier__token": {
+          "?????????????": "???????"
+        }
+      }
+    }
+  }

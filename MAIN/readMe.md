@@ -1,0 +1,152 @@
+<h1>ORLOG<h1>
+
+<h3>It is a dice rolling gam eof chance and strategy.<h3>
+
+BASICS OF HOW TO PLAY:
+
+INVENTORY:
+You start with the follwoing structure:
+
+BOARD{
+
+    COIN: 1 GOLD TO BE FLIPPED;
+
+    PLAYER 1 {
+        STONES: 15; 
+        DICE: 6
+        GOD_FAVOURS: 3 MAX ;
+        TOKEN_BALANCE: 0;  
+    }
+
+    PLAYER 2 {
+        STONES: 15; 
+        DICE: 6
+        GOD_FAVOURS: 3 MAX ;
+        TOKEN_BALANCE: 0; 
+    }   
+}
+
+INVENTORY KEY:
+Represenatation of Figures 
+
+1) DICE
+
+DIE =  {
+    FACES:{
+        shield, 
+        helmet, 
+        axe,
+        arrow, 
+        hand,
+    };
+}
+
+YOU START WITH 6 DICE 
+DICE CAN BE BORDERED OR NOT BORDERED 
+BORDERED DICE GIVE YOU GOD FAVOUR TOKEN
+
+1a) HAND SYMBOL DICE FACE(BORDERED)
+LETS YOU STEAL ONE GOD TOKEN FROM THE OPPONENTS BATCH AFTER ALL THE DICE HAVE BEEN PLAYED 
+
+1b)  AXE SYMBOL DICE FACE(BORDERED)
+DEALS -1 AXE DAMAGE (CAN BE BLOCKED BY HELMET SYMBOL)
+
+1c)  HELMET SYMBOL DICE FACE(BORDERED)
+BLOCKS AXE DAAMGE
+
+1d)  SHIELD SYMBOL DICE FACE(BORDERED)
+BLOCKS ARROW DAMAGE
+
+1e)  ARROW SYMBOL DICE FACE(BORDERED)
+DEALS -1 ARROW DAMAGE (CAN BE BLOCKED BY SHIELD SYMBOL)
+
+
+
+
+2) GOD TOKEN
+
+STRUCTURE
+
+TOKENS = {
+
+TOKEN_TYPE_1 : { 
+        POWER_TYPE: REVIVING STONES
+        POWER_SCALE: {
+            LOW_LEVEL_EFFECT:{
+                COST: 2 GOD TOKENS
+                EFFECT: 2 POINTS 
+            }
+            MID_LEVEL_EFFECT:{
+                COST: 4 GOD TOKENS
+                EFFECT: 4 POINTS 
+            }
+            MID_LEVEL_EFFECT:{
+                COST: 8 GOD TOKENS
+                EFFECT: 8 POINTS 
+            }
+        }
+    }
+
+TOKEN_TYPE_2 : {  
+        POWER_TYPE: OFFENCE(ATTACKING STONES)
+        POWER_SCALE: {
+            LOW_LEVEL_EFFECT:{
+                COST: 2 GOD TOKENS
+                EFFECT: 2 POINTS 
+            }
+            MID_LEVEL_EFFECT:{
+                COST: 4 GOD TOKENS
+                EFFECT: 4 POINTS 
+            }
+            MID_LEVEL_EFFECT:{
+                COST: 8 GOD TOKENS
+                EFFECT: 8 POINTS 
+            }
+        }
+    
+    }
+
+TOKEN_TYPE_3 : { 
+        POWER_TYPE: MULTIPLY ATTACK POWER
+        POWER_SCALE: {
+        LOW_LEVEL_EFFECT:{
+            COST: 2 GOD TOKENS
+            EFFECT: 2 POINTS 
+        }
+        MID_LEVEL_EFFECT:{
+            COST: 4 GOD TOKENS
+            EFFECT: 4 POINTS 
+        }
+        MID_LEVEL_EFFECT:{
+            COST: 8 GOD TOKENS
+            EFFECT: 8 POINTS 
+        }
+        }
+
+    }
+}
+
+
+
+resolution phase version 2- 
+linign up the dice anination according to different 
+
+
+
+
+GOALS 
+1)ULTIMATE GOAL IS TO ELIMINATE ALL 15 OPPONENTS STONES BEFORE THEY ELIMIONATE YOURS WITHIN THE NUMBER OF PLAYED ROUNDS
+2)COIN TOSS DETERMINES WHO GOES FIRST 
+3) EACH ROUIND HAS 3 DICE ROLLS (ROLL PHASE)
+4) YOU CAN KEEO ANY NUNBER OF DICE ON FIRST 2 ROLLS
+5)ALL DICE MUST BE PLAYED/EXHAUSTED AUTOMATUCALLY BY THE THIRD ROLE OF A SINGLE PLAYER 
+6)IF NOT EXHAUSTED, THEY WILL BE AUTONATICALLY PLAYED
+7)ONCE ALL DICE ARE ROLLED YOU WILL GET CHANCE TO USE GOD FAVOUR
+---IMPORTANT----
+8) IF YOU SELECT GOD FAVOUR WITH TOKEN COST > PLAYER TOKEN BALANCE AFTER ROUND HAS BEEN PLAYED: GOD FAVOUR WILL BE UNABLE TO EXECUTE 
+
+
+9) KEEP LOOPING:()
+
+
+
